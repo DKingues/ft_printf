@@ -6,7 +6,7 @@
 #    By: dicosta- <dicosta-@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/11/17 16:29:45 by dicosta-          #+#    #+#              #
-#    Updated: 2024/11/19 18:24:46 by dicosta-         ###   ########.fr        #
+#    Updated: 2024/11/19 19:15:04 by dicosta-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,7 +16,8 @@ CFLAGS = -Wall -Wextra -Werror
 
 NAME = libft.a
 
-SRC = ft_printf.c ft_print_format.c ft_print_digit.c ft_print_str.c ft_print_hex.c ft_print_chr.c
+SRC = ft_printf.c ft_print_format.c ft_print_digit.c ft_print_str.c \
+	ft_print_hex.c ft_print_chr.c ft_print_ptr.c \
 
 OBJ = $(SRC:.c=.o)
 

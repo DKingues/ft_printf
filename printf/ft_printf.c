@@ -6,7 +6,7 @@
 /*   By: dicosta- <dicosta-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/17 15:02:10 by dicosta-          #+#    #+#             */
-/*   Updated: 2024/11/19 18:24:05 by dicosta-         ###   ########.fr       */
+/*   Updated: 2024/11/19 19:31:19 by dicosta-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,10 @@ int ft_printf(const char* format, ...)
     while (format[i] != '\0')
     {
         if (format[i] == '%')
-            ft_print_format(format[++i], ap);
+        {
+            i++;
+            print_lng += ft_print_format(format[i], ap);
+        }
         else
             print_lng += write(1, &format[i], 1);
         i++;
@@ -35,10 +38,12 @@ int ft_printf(const char* format, ...)
 
 int main(void)
 {   
+    char    *ptr = "DIOGO";
+    
     ft_printf("DIOGO PRINTF\n\n");
-    int ft_counter = ft_printf("DECIMAL: %d\nINT: %i\nHEX: %x\nSTRING: %s\nCHAR: %c\n\n", 23, 23, 3000, "Diogo", 'd');
+    int ft_counter = ft_printf("DECIMAL: %d\nINT: %i\nHEX: %x\nHCHEX: %X\nSTRING: %s\nCHAR: %c\nPOINTER: %p\n\n", 23, 23, 3000, 3000, "Diogo", 'd', ptr);
     ft_printf("DIOGO COUNTER: %i\n\n\n", ft_counter);
     printf("ORIGINAL PRINTF\n\n");
-    int og_counter = printf("DECIMAL: %d\nINT: %i\nHEX: %x\nSTRING: %s\nCHAR: %c\n\n", 23, 23, 3000, "Diogo", 'd');
+    int og_counter = printf("DECIMAL: %d\nINT: %i\nHEX: %x\nHCHEX: %X\nSTRING: %s\nCHAR: %c\nPOINTER: %p\n\n", 23, 23, 3000, 3000, "Diogo", 'd', ptr);
     printf("COUNTER: %i\n\n\n", og_counter);
 }

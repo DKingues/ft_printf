@@ -6,7 +6,7 @@
 /*   By: dicosta- <dicosta-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/17 16:29:51 by dicosta-          #+#    #+#             */
-/*   Updated: 2024/11/19 18:24:32 by dicosta-         ###   ########.fr       */
+/*   Updated: 2024/11/19 19:29:50 by dicosta-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,7 @@ int	ft_print_chr(int nbr);
 
 // Int Conversions
 int ft_print_digit(int d);
-int	ft_print_hex(int nbr, char *base);
+int	ft_print_hex(long int nbr, char *base);
+int	ft_print_ptr(unsigned long nbr);
 
 #endif
