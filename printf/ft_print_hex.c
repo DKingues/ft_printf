@@ -1,28 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_str.c                                     :+:      :+:    :+:   */
+/*   ft_print_hex.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dicosta- <dicosta-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/17 19:08:24 by dicosta-          #+#    #+#             */
-/*   Updated: 2024/11/19 17:42:16 by dicosta-         ###   ########.fr       */
+/*   Created: 2024/11/19 16:28:00 by dicosta-          #+#    #+#             */
+/*   Updated: 2024/11/19 18:16:58 by dicosta-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libftprintf.h"
 
-int ft_print_str(char * str)
+int	ft_print_hex(int nbr, char *base)
 {
-    int counter;
-    int i;
+	int	counter;
 
-    counter = 0;
-    i = 0;
-    while (str[i])
-    {
-        counter += write(1, &str[i], 1);
-        i++;
-    }
-    return (counter);
+	counter = 0;
+	if (nbr < 0)
+	{
+		counter += write(1, "-", 1);
+	}
+	if (nbr > 16)
+	{
+		ft_print_hex(nbr / 16, base);
+	}
+	nbr %= 16;
+	counter += write(1, &base[nbr], 1);
+	return	(counter);
 }

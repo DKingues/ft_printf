@@ -6,13 +6,13 @@
 /*   By: dicosta- <dicosta-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/17 19:34:33 by dicosta-          #+#    #+#             */
-/*   Updated: 2024/11/17 19:58:01 by dicosta-         ###   ########.fr       */
+/*   Updated: 2024/11/19 17:42:07 by dicosta-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "libftprintf.h"
 
-int ft_print_number(int d)
+int ft_print_digit(int d)
 {
     int counter;
     

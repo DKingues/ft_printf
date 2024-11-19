@@ -1,28 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_str.c                                     :+:      :+:    :+:   */
+/*   ft_print_chr.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dicosta- <dicosta-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/17 19:08:24 by dicosta-          #+#    #+#             */
-/*   Updated: 2024/11/19 17:42:16 by dicosta-         ###   ########.fr       */
+/*   Created: 2024/11/19 18:21:20 by dicosta-          #+#    #+#             */
+/*   Updated: 2024/11/19 18:25:51 by dicosta-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libftprintf.h"
 
-int ft_print_str(char * str)
+int	ft_print_chr(int nbr)
 {
-    int counter;
-    int i;
+	int	counter;
 
-    counter = 0;
-    i = 0;
-    while (str[i])
-    {
-        counter += write(1, &str[i], 1);
-        i++;
-    }
-    return (counter);
+	counter = 0;
+	counter += write(1, &nbr, 1);
+	return (counter);
 }
