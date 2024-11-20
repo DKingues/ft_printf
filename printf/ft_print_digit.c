@@ -6,32 +6,34 @@
 /*   By: dicosta- <dicosta-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/17 19:34:33 by dicosta-          #+#    #+#             */
-/*   Updated: 2024/11/19 19:38:12 by dicosta-         ###   ########.fr       */
+/*   Updated: 2024/11/20 17:01:15 by dicosta-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libftprintf.h"
+#include "ft_printf.h"
 
 int ft_print_digit(int d)
 {
     int counter;
+	long bd;
     
+	bd = d;
     counter = 0;
-    if (d < 0)
+    if (bd < 0)
     {
         write(1, "-", 1);
         counter++;
-        d *= -1;
+        bd *= -1;
     }
-    if (d > 9)
+    if (bd > 9)
     {
-        ft_print_digit(d / 10); 
-        ft_print_digit(d % 10); 
+        counter += ft_print_digit(bd / 10); 
+        counter += ft_print_digit(bd % 10); 
     }
     else
     {
-        d = d + '0';
-        counter += write(1, &d, 1);
+        bd = bd + '0';
+        counter += write(1, &bd, 1);
     }
     return (counter);
 }

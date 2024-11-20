@@ -6,11 +6,11 @@
 /*   By: dicosta- <dicosta-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/19 16:28:00 by dicosta-          #+#    #+#             */
-/*   Updated: 2024/11/19 19:29:34 by dicosta-         ###   ########.fr       */
+/*   Updated: 2024/11/20 17:01:25 by dicosta-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libftprintf.h"
+#include "ft_printf.h"
 
 int	ft_print_hex(long int nbr, char *base)
 {
@@ -23,7 +23,7 @@ int	ft_print_hex(long int nbr, char *base)
 	}
 	if (nbr > 16)
 	{
-		ft_print_hex(nbr / 16, base);
+		counter += ft_print_hex(nbr / 16, base);
 	}
 	nbr %= 16;
 	counter += write(1, &base[nbr], 1);

@@ -6,11 +6,11 @@
 /*   By: dicosta- <dicosta-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/19 18:27:33 by dicosta-          #+#    #+#             */
-/*   Updated: 2024/11/19 19:51:24 by dicosta-         ###   ########.fr       */
+/*   Updated: 2024/11/20 17:01:31 by dicosta-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libftprintf.h"
+#include "ft_printf.h"
 
 int	ft_print_ptr(unsigned long nbr)
 {
